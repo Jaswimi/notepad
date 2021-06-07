@@ -29,7 +29,7 @@ SimpleCursorAdapter adapter
         android:singleLine="true" />  `
 
 ```
-- 接着更改第二个参数cursor,cursor的定义如下：
+- 接着更改第三个参数cursor,cursor的定义如下：
 ```java
  Cursor cursor = managedQuery(    
             getIntent().getData(),            // Use the default content URI for the provider.
@@ -49,12 +49,12 @@ SimpleCursorAdapter adapter
     
 ```
 
-- 更改第三个参数指向的数组dataColumns,添加列名COLUMN_NAME_MODIFICATION_DATE
+- 更改第四个参数指向的数组dataColumns,添加列名COLUMN_NAME_MODIFICATION_DATE
 ```java
 String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE,
             NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE}; 
 ```
-- 更改第四个参数指向的viewID数组,把刚才在布局文件中加入的text2添加进数组，这样就将text2和数据库取出来的时间戳绑定
+- 更改第五个参数指向的viewID数组,把刚才在布局文件中加入的text2添加进数组，这样就将text2和数据库取出来的时间戳绑定
 ```java
 int[] viewIDs = { android.R.id.text1 ,android.R.id.text2};
 ```
